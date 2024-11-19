@@ -1,0 +1,150 @@
+[gd_scene load_steps=10 format=3 uid="uid://584qep78cngr"]
+
+[ext_resource type="Script" path="res://scenes/start_menu/pause_tab_container.gd" id="1_wg12v"]
+[ext_resource type="FontFile" uid="uid://b3ular8ns2bqe" path="res://Chibolddemo-1GD7g.ttf" id="1_wupac"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1o5v7"]
+bg_color = Color(0.223529, 0.215686, 0.356863, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+shadow_color = Color(0.07, 0.07, 0.07, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(1, -5)
+
+[sub_resource type="Theme" id="Theme_rmaxx"]
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_wupac")
+Label/styles/normal = SubResource("StyleBoxFlat_1o5v7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1wcy"]
+bg_color = Color(0.223529, 0.215686, 0.356863, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.0756, 0.08, 0.0712, 0.6)
+shadow_size = 15
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_eexed"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_l1wcy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fm0l"]
+bg_color = Color(0.4512, 0.516373, 0.94, 1)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+shadow_color = Color(0.270285, 0.2479, 0.37, 1)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jw0k0"]
+bg_color = Color(0.619608, 0.662745, 0.941176, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+shadow_color = Color(0.396078, 0.364706, 0.541176, 1)
+shadow_size = 8
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_nnclc"]
+Button/styles/hover = SubResource("StyleBoxFlat_7fm0l")
+Button/styles/normal = SubResource("StyleBoxFlat_jw0k0")
+Button/styles/pressed = SubResource("StyleBoxFlat_jw0k0")
+
+[node name="pause_tab_container" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_wg12v")
+
+[node name="Control2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 212.0
+offset_top = 278.0
+offset_right = 252.0
+offset_bottom = 318.0
+
+[node name="Label" type="Label" parent="Control2"]
+layout_mode = 2
+offset_left = 244.0
+offset_top = -230.0
+offset_right = 484.0
+offset_bottom = -172.0
+theme = SubResource("Theme_rmaxx")
+theme_override_colors/font_color = Color(0.968627, 0.909804, 0.964706, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 1
+text = "pause
+"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = 100.0
+offset_right = -200.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_eexed")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -48
+
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="resume" type="Button" parent="PanelContainer/MarginContainer/Control"]
+layout_mode = 2
+offset_left = 252.0
+offset_top = 40.0
+offset_right = 484.0
+offset_bottom = 128.0
+theme = SubResource("Theme_nnclc")
+theme_override_colors/font_color = Color(0.968627, 0.909804, 0.964706, 1)
+theme_override_fonts/font = ExtResource("1_wupac")
+theme_override_font_sizes/font_size = 40
+text = "RESUME	"
+
+[node name="restart" type="Button" parent="PanelContainer/MarginContainer/Control"]
+layout_mode = 2
+offset_left = 252.0
+offset_top = 144.0
+offset_right = 484.0
+offset_bottom = 232.0
+theme = SubResource("Theme_nnclc")
+theme_override_colors/font_color = Color(0.968627, 0.909804, 0.964706, 1)
+theme_override_fonts/font = ExtResource("1_wupac")
+theme_override_font_sizes/font_size = 40
+text = "RESTART"
+
+[node name="quit" type="Button" parent="PanelContainer/MarginContainer/Control"]
+layout_mode = 2
+offset_left = 252.0
+offset_top = 256.0
+offset_right = 484.0
+offset_bottom = 344.0
+theme = SubResource("Theme_nnclc")
+theme_override_colors/font_color = Color(0.968627, 0.909804, 0.964706, 1)
+theme_override_fonts/font = ExtResource("1_wupac")
+theme_override_font_sizes/font_size = 40
+text = "QUIT"

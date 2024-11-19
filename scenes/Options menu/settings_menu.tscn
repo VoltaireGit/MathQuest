@@ -1,6 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlwsdimkqlhi4"]
+[gd_scene load_steps=7 format=3 uid="uid://dlwsdimkqlhi4"]
 
 [ext_resource type="Script" path="res://scenes/Options menu/settings_menu.gd" id="1_l8om8"]
+[ext_resource type="PackedScene" uid="uid://bgk0s3fuienb6" path="res://scenes/Options menu/settings_tab_container.tscn" id="2_fm718"]
+[ext_resource type="FontFile" uid="uid://b3ular8ns2bqe" path="res://Chibolddemo-1GD7g.ttf" id="3_jvuow"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh8d5"]
+bg_color = Color(0.39527, 0.58, 0.0522, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.419608, 0.478431, 0.313726, 1)
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htnui"]
+bg_color = Color(0.51805, 0.65, 0.273, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.4212, 0.48, 0.312, 1)
+shadow_size = 4
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_tmer0"]
+Button/fonts/font = ExtResource("3_jvuow")
+Button/styles/hover = SubResource("StyleBoxFlat_dh8d5")
+Button/styles/normal = SubResource("StyleBoxFlat_htnui")
+Button/styles/pressed = SubResource("StyleBoxFlat_htnui")
 
 [node name="Settings_Menu" type="Control"]
 layout_mode = 3
@@ -27,12 +55,12 @@ theme_override_constants/margin_bottom = 12
 layout_mode = 2
 theme_override_constants/separation = -48
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Settings"
-horizontal_alignment = 1
-vertical_alignment = 1
+
+[node name="Settings_Tab_Container" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_fm718")]
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -40,10 +68,30 @@ layout_mode = 2
 [node name="Exit_Button" type="Button" parent="MarginContainer/VBoxContainer/Control"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
-offset_left = 30.0
-offset_top = 568.0
-offset_right = 180.0
-offset_bottom = 618.0
+offset_left = 28.0
+offset_top = -68.0
+offset_right = 178.0
+offset_bottom = -18.0
 size_flags_horizontal = 8
 size_flags_vertical = 2
+theme = SubResource("Theme_tmer0")
 text = "back"
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 2
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 655.0
+offset_bottom = 106.0
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0.32, 0.32, 0.32, 1)
+theme_override_fonts/font = ExtResource("3_jvuow")
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1

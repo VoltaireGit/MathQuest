@@ -1,0 +1,80 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://degrqwpjgpp6x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfcge"]
+bg_color = Color(0.50895, 0.58, 0.377, 0.901961)
+border_color = Color(0.37328, 0.48, 0.2592, 0.901961)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.372549, 0.443137, 0.380392, 1)
+shadow_size = 10
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v376n"]
+bg_color = Color(0.345098, 0.470588, 0.313726, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0.2944, 0.4, 0.268, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hr01j"]
+bg_color = Color(0.468869, 0.531445, 0.39807, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0.377325, 0.43, 0.2795, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d04by"]
+bg_color = Color(0.345098, 0.470588, 0.313726, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0.2944, 0.4, 0.268, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46olo"]
+bg_color = Color(0.468869, 0.531445, 0.39807, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0.377325, 0.43, 0.2795, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cg04c"]
+bg_color = Color(0.345098, 0.470588, 0.313726, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0.2944, 0.4, 0.268, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[resource]
+TabContainer/styles/panel = SubResource("StyleBoxFlat_tfcge")
+TabContainer/styles/tab_disabled = SubResource("StyleBoxFlat_v376n")
+TabContainer/styles/tab_focus = SubResource("StyleBoxFlat_hr01j")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_d04by")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_46olo")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_cg04c")

@@ -1,0 +1,184 @@
+[gd_scene load_steps=16 format=3 uid="uid://b4owxtumcdutb"]
+
+[ext_resource type="FontFile" uid="uid://cmk6xcubft6rn" path="res://RaspberieRegular-owa2V.ttf" id="1_53yyq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nu1vx"]
+bg_color = Color(1, 0.47, 0.47, 0.901961)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="Theme" id="Theme_6i5y4"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_nu1vx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ko5bi"]
+bg_color = Color(0.20142, 0.81, 0.0162, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.0899, 0.29, 0.029, 1)
+shadow_size = 10
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1g41"]
+bg_color = Color(0.29854, 0.69, 0.1794, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.0886667, 0.38, 0, 1)
+shadow_size = 10
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyos5"]
+bg_color = Color(0.29854, 0.69, 0.1794, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.0886667, 0.38, 0, 1)
+shadow_size = 10
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_udprt"]
+Button/font_sizes/font_size = 25
+Button/fonts/font = ExtResource("1_53yyq")
+Button/styles/hover = SubResource("StyleBoxFlat_ko5bi")
+Button/styles/normal = SubResource("StyleBoxFlat_g1g41")
+Button/styles/pressed = SubResource("StyleBoxFlat_fyos5")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n1hr"]
+bg_color = Color(0.97, 0.856833, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.59, 0.521855, 0.00589999, 1)
+shadow_size = 10
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7oi51"]
+bg_color = Color(0.68, 0.68, 0.1224, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.51, 0.460615, 0.0867, 1)
+shadow_size = 10
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1uhvn"]
+bg_color = Color(0.68, 0.68, 0.1224, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.51, 0.460615, 0.0867, 1)
+shadow_size = 10
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_re6nj"]
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_53yyq")
+Button/styles/hover = SubResource("StyleBoxFlat_8n1hr")
+Button/styles/normal = SubResource("StyleBoxFlat_7oi51")
+Button/styles/pressed = SubResource("StyleBoxFlat_1uhvn")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22h36"]
+bg_color = Color(0.41666, 0.1411, 0.83, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.17708, 0.0418, 0.38, 1)
+shadow_size = 10
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00gii"]
+bg_color = Color(0.52096, 0.2816, 0.88, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.2444, 0.094, 0.47, 1)
+shadow_size = 10
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfuf0"]
+bg_color = Color(0.52096, 0.2816, 0.88, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.2444, 0.094, 0.47, 1)
+shadow_size = 10
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_tlb71"]
+Button/font_sizes/font_size = 25
+Button/fonts/font = ExtResource("1_53yyq")
+Button/styles/hover = SubResource("StyleBoxFlat_22h36")
+Button/styles/normal = SubResource("StyleBoxFlat_00gii")
+Button/styles/pressed = SubResource("StyleBoxFlat_qfuf0")
+
+[node name="start_tab_container" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 136.0
+offset_right = -64.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_6i5y4")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+
+[node name="Control2" type="Control" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="greaternless_button" type="Button" parent="PanelContainer/Control2"]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 136.0
+offset_right = 904.0
+offset_bottom = 296.0
+theme = SubResource("Theme_udprt")
+text = "GREATER THAN
+LESS THAN"
+
+[node name="puzzle_button" type="Button" parent="PanelContainer/Control2"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 136.0
+offset_right = 600.0
+offset_bottom = 296.0
+mouse_filter = 1
+theme = SubResource("Theme_re6nj")
+text = "PUZZLE"
+
+[node name="flash_card_button" type="Button" parent="PanelContainer/Control2"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 136.0
+offset_right = 288.0
+offset_bottom = 296.0
+theme = SubResource("Theme_tlb71")
+text = "FLASHCARDS"

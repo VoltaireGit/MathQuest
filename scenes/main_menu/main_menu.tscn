@@ -1,0 +1,215 @@
+[gd_scene load_steps=20 format=3 uid="uid://dihv3erklimm0"]
+
+[ext_resource type="Script" path="res://scenes/main_menu/main_menu.gd" id="1_23w1p"]
+[ext_resource type="Texture2D" uid="uid://mhymk6j88khx" path="res://picture/DRAFTED BACKGROUND  .png" id="1_hxd20"]
+[ext_resource type="FontFile" uid="uid://clbi5ag80b46m" path="res://BathTimeRegular-Yezo.ttf" id="2_ayj53"]
+[ext_resource type="FontFile" uid="uid://b3ular8ns2bqe" path="res://Chibolddemo-1GD7g.ttf" id="4_05cyo"]
+[ext_resource type="Theme" uid="uid://c12we4h8ctjqh" path="res://scenes/main_menu/default_header_font.tres" id="4_jgs3f"]
+[ext_resource type="PackedScene" uid="uid://dlwsdimkqlhi4" path="res://scenes/Options menu/settings_menu.tscn" id="5_pkya3"]
+[ext_resource type="PackedScene" uid="uid://cmjwk8qwe7gkw" path="res://scenes/about_menu/about_menu.tscn" id="6_c7iy7"]
+[ext_resource type="PackedScene" uid="uid://b1dkrcx573y3s" path="res://scenes/start_menu/start_menu.tscn" id="7_f4ys0"]
+[ext_resource type="AudioStream" uid="uid://dt8mj7w3d5pqj" path="res://AnyConv.com__BINI - Pantropiko (Official Instrumental).ogg" id="7_rfyjg"]
+[ext_resource type="PackedScene" uid="uid://gyrfwirdmw8h" path="res://scenes/start_menu/start_flashcards_game.tscn" id="10_6dv5c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh8d5"]
+bg_color = Color(0.39527, 0.58, 0.0522, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.419608, 0.478431, 0.313726, 1)
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htnui"]
+bg_color = Color(0.51805, 0.65, 0.273, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.4212, 0.48, 0.312, 1)
+shadow_size = 4
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_77q1r"]
+Button/fonts/font = ExtResource("4_05cyo")
+Button/styles/hover = SubResource("StyleBoxFlat_dh8d5")
+Button/styles/normal = SubResource("StyleBoxFlat_htnui")
+Button/styles/pressed = SubResource("StyleBoxFlat_htnui")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pra07"]
+bg_color = Color(0.9, 0.6309, 0.198, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.73, 0.51173, 0.1606, 1)
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n63w2"]
+bg_color = Color(0.9, 0.7068, 0.396, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.76, 0.596853, 0.3344, 1)
+shadow_size = 5
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_imo4x"]
+Button/fonts/font = ExtResource("4_05cyo")
+Button/styles/hover = SubResource("StyleBoxFlat_pra07")
+Button/styles/normal = SubResource("StyleBoxFlat_n63w2")
+Button/styles/pressed = SubResource("StyleBoxFlat_n63w2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p5ty"]
+bg_color = Color(0.2075, 0.332, 0.83, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.3348, 0.39184, 0.62, 1)
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omxfa"]
+bg_color = Color(0.447059, 0.52549, 0.827451, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.3186, 0.37288, 0.59, 1)
+shadow_size = 4
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_jnx24"]
+Button/fonts/font = ExtResource("4_05cyo")
+Button/styles/hover = SubResource("StyleBoxFlat_3p5ty")
+Button/styles/normal = SubResource("StyleBoxFlat_omxfa")
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_23w1p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hxd20")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.358, 0.28, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_ayj53")
+theme_override_font_sizes/font_size = 120
+text = "Math Quest
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Start_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme = ExtResource("4_jgs3f")
+text = "start"
+
+[node name="Seperator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Setting_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme = SubResource("Theme_77q1r")
+text = "Setting
+"
+
+[node name="Seperator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="About_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme = SubResource("Theme_imo4x")
+text = "About"
+
+[node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Exit_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme = SubResource("Theme_jnx24")
+text = "Exit
+"
+
+[node name="Settings_Menu" parent="." instance=ExtResource("5_pkya3")]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 1140.0
+offset_bottom = 636.0
+
+[node name="About_menu" parent="." instance=ExtResource("6_c7iy7")]
+visible = false
+layout_mode = 1
+
+[node name="Start_menu" parent="." instance=ExtResource("7_f4ys0")]
+visible = false
+layout_mode = 1
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_rfyjg")
+volume_db = -14.512
+autoplay = true
+bus = &"Music"
+
+[node name="start_flashcards_game" parent="." instance=ExtResource("10_6dv5c")]
+visible = false
+layout_mode = 1

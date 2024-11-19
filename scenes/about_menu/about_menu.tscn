@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmjwk8qwe7gkw"]
+
+[ext_resource type="Script" path="res://scenes/about_menu/about_menu.gd" id="1_b0b1i"]
+[ext_resource type="PackedScene" uid="uid://chdel551r5tpb" path="res://scenes/about_menu/about_tab_container.tscn" id="2_lxu1x"]
+[ext_resource type="FontFile" uid="uid://b3ular8ns2bqe" path="res://Chibolddemo-1GD7g.ttf" id="3_t7hb7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpqu5"]
+bg_color = Color(0.900664, 0.616785, 0.226748, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.850556, 0.541615, 0.325055, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="Theme" id="Theme_njtq3"]
+Label/constants/outline_size = 1
+Label/fonts/font = ExtResource("3_t7hb7")
+Label/styles/normal = SubResource("StyleBoxFlat_mpqu5")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pra07"]
+bg_color = Color(0.9, 0.6309, 0.198, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.73, 0.51173, 0.1606, 1)
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n63w2"]
+bg_color = Color(0.9, 0.7068, 0.396, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.76, 0.596853, 0.3344, 1)
+shadow_size = 5
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_15beq"]
+Button/fonts/font = ExtResource("3_t7hb7")
+Button/styles/hover = SubResource("StyleBoxFlat_pra07")
+Button/styles/normal = SubResource("StyleBoxFlat_n63w2")
+Button/styles/pressed = SubResource("StyleBoxFlat_n63w2")
+
+[node name="About_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b0b1i")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="About_tab_container" parent="MarginContainer" instance=ExtResource("2_lxu1x")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -48
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Control2"]
+layout_mode = 2
+offset_left = 476.0
+offset_top = 20.0
+offset_right = 676.0
+offset_bottom = 62.0
+size_flags_horizontal = 0
+theme = SubResource("Theme_njtq3")
+theme_override_font_sizes/font_size = 30
+text = "About"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Exit_button_about" type="Button" parent="MarginContainer/VBoxContainer/Control"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 28.0
+offset_top = 610.0
+offset_right = 178.0
+offset_bottom = 660.0
+grow_vertical = 2
+theme = SubResource("Theme_15beq")
+text = "Back
+"

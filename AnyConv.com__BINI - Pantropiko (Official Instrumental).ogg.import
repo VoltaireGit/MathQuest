@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dt8mj7w3d5pqj"
+path="res://.godot/imported/AnyConv.com__BINI - Pantropiko (Official Instrumental).ogg-637008f3d5f5b6e9b60ba461668cf31f.oggvorbisstr"
+
+[deps]
+
+source_file="res://AnyConv.com__BINI - Pantropiko (Official Instrumental).ogg"
+dest_files=["res://.godot/imported/AnyConv.com__BINI - Pantropiko (Official Instrumental).ogg-637008f3d5f5b6e9b60ba461668cf31f.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

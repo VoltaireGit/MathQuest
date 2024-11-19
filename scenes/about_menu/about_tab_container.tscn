@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://chdel551r5tpb"]
+
+[ext_resource type="FontFile" uid="uid://cmk6xcubft6rn" path="res://RaspberieRegular-owa2V.ttf" id="1_ia8ev"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ga1a"]
+bg_color = Color(0.901961, 0.709804, 0.4, 0.901961)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.831373, 0.639216, 0.313726, 0.901961)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="Theme" id="Theme_e11gf"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_2ga1a")
+
+[node name="About_tab_container" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_e11gf")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/Control"]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 14.0
+offset_right = 908.0
+offset_bottom = 406.0
+theme_override_fonts/normal_font = ExtResource("1_ia8ev")
+theme_override_font_sizes/normal_font_size = 26
+text = "\"Math Games for Kids\" is an innovative offline application designed to support children aged 10 and below who may find math challenging. Our mission is to nurture a love for learning by transforming complex math concepts into enjoyable and interactive gameplay. 
+
+By gamifying math, the application fosters a fun and engaging environment where students can develop their skills, boost their confidence, and overcome difficulties at their own pace. Through thoughtfully crafted challenges and activities, Math Games for Kids aims to make learning math not only accessible but also an exciting adventure for every child."
+scroll_active = false
+context_menu_enabled = true

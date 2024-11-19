@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1dkrcx573y3s"]
+
+[ext_resource type="Script" path="res://scenes/start_menu/start_menu.gd" id="1_75ph3"]
+[ext_resource type="PackedScene" uid="uid://b4owxtumcdutb" path="res://scenes/start_menu/start_tab_container.tscn" id="2_kdnc2"]
+[ext_resource type="Theme" uid="uid://c12we4h8ctjqh" path="res://scenes/main_menu/default_header_font.tres" id="3_3yanb"]
+[ext_resource type="FontFile" uid="uid://b3ular8ns2bqe" path="res://Chibolddemo-1GD7g.ttf" id="3_62lij"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3q7uc"]
+bg_color = Color(1, 0.23, 0.23, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="Theme" id="Theme_5ojwc"]
+Label/styles/normal = SubResource("StyleBoxFlat_3q7uc")
+
+[node name="Start_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_75ph3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -48
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="start_tab_container" parent="MarginContainer/VBoxContainer/Control2" instance=ExtResource("2_kdnc2")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -536.0
+offset_right = 528.0
+offset_bottom = 556.0
+grow_vertical = 1
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="back_button_start" type="Button" parent="MarginContainer/VBoxContainer/Control"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+offset_left = 28.0
+offset_top = 660.0
+offset_right = 178.0
+offset_bottom = 710.0
+theme = ExtResource("3_3yanb")
+text = "Back"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 1140.0
+offset_bottom = 12.0
+
+[node name="Label" type="Label" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -43.5
+offset_right = 232.0
+offset_bottom = 43.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5ojwc")
+theme_override_fonts/font = ExtResource("3_62lij")
+theme_override_font_sizes/font_size = 30
+text = "Pick a mode"
+horizontal_alignment = 1
+vertical_alignment = 1
